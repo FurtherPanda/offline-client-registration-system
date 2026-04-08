@@ -1,8 +1,6 @@
 console.log("✅ app.js está corriendo");
 
-// =============================================
-// 1️⃣ Registro del Service Worker
-// =============================================
+
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
@@ -12,18 +10,14 @@ if ("serviceWorker" in navigator) {
   });
 }
 
-// =============================================
-// 2️⃣ Variables globales
-// =============================================
+
 const DB_NAME = "registroEventoDB";
 const DB_VERSION = 1;
 let db;
 let states = [];
 let cities = [];
 
-// =============================================
-// 3️⃣ Leer parámetros UTM de la URL
-// =============================================
+
 function obtenerUTMs() {
   const params = new URLSearchParams(window.location.search);
   return {
@@ -33,10 +27,7 @@ function obtenerUTMs() {
 }
 const { utmSource, utmValue } = obtenerUTMs();
 
-// =============================================
-// 🔹 Detectar evento desde la URL
-// =============================================
-// 🔹 Detectar evento desde la URL (mejorada)
+
 function obtenerEventoDesdeURL() {
   const path = window.location.pathname; // Ejemplo: "/jdlink-boost/sync.html"
   const partes = path.split("/").filter(Boolean); // ["jdlink-boost", "sync.html"]
@@ -62,9 +53,6 @@ const ENDPOINT_API = `https://registro.init.mx/api/${EVENTO}/registrations`;
 console.log("📡 Endpoint configurado:", ENDPOINT_API);
 
 
-// =============================================
-// 4️⃣ Cargar estados y municipios desde JSON
-// =============================================
 async function cargarDatosDesdeJSON() {
   try {
     const statesResponse = await fetch("data/states.json");
@@ -109,9 +97,7 @@ function inicializarSelects() {
   });
 }
 
-// =============================================
-// 5️⃣ Función principal: inicializa app
-// =============================================
+
 async function initApp() {
   await cargarDatosDesdeJSON();
 
@@ -132,9 +118,7 @@ async function initApp() {
 
 initApp();
 
-// =============================================
-// 6️⃣ Guardar un nuevo registro
-// =============================================
+
 const registroForm = document.getElementById("registroForm");
 if (registroForm) {
   registroForm.addEventListener("submit", (e) => {
@@ -174,9 +158,7 @@ if (registroForm) {
   });
 }
 
-// =============================================
-// 7️⃣ Mostrar registros guardados
-// =============================================
+
 function mostrarRegistros() {
   const lista = document.getElementById("listaRegistros");
   if (!lista || !db) return;
@@ -200,9 +182,7 @@ function mostrarRegistros() {
   };
 }
 
-// =============================================
-// 8️⃣ Sincronizar registros pendientes
-// =============================================
+
 const syncBtn = document.getElementById("syncBtn");
 if (syncBtn) {
   syncBtn.addEventListener("click", async () => {
@@ -281,12 +261,7 @@ if (syncBtn) {
 }
 
 
-// =============================================
-// 🔹 Configurar imagen dinámica de fondo (.png)
-// =============================================
-// =============================================
-// 🔹 Configurar imagen dinámica de fondo (.png)
-// =============================================
+
 function configurarImagenFondo() {
   const path = window.location.pathname;
   const partes = path.split("/").filter(Boolean);
@@ -332,9 +307,7 @@ function configurarImagenFondo() {
 
 configurarImagenFondo();
 
-// =============================================
-// 🖼️ Configurar imagen dinámica del banner
-// =============================================
+
 function configurarBannerEvento() {
   const path = window.location.pathname; // ej: /jdlink-boost/ o /sync.html
   const partes = path.split("/").filter(Boolean);
