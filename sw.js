@@ -59,7 +59,6 @@ const URLS_TO_CACHE = [
   'img/expoagro/jdlink-boost/expo-375x988.png',
   'img/expoagro/jdlink-boost/Copia de banner-text.png'
 ];
-
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => cache.addAll(URLS_TO_CACHE))
