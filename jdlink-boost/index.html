@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+  />
+  <title>John Deere</title>
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="../https://fonts.googleapis.com" />
+  <link rel="preconnect" href="../https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    .form-container-register--5065 {
+      background-image: url("img/expoagro/expo-2025.png");
+    }
+    @media (max-width: 767px) {
+      .form-container-register--5065 {
+        background-image: url("img/expoagro/expo-2025-375x988.png");
+      }
+    }
+  </style>
+
+  <!-- ✅ Íconos para pantalla de inicio -->
+  <!-- Apple (iPhone/iPad) -->
+  <link rel="apple-touch-icon" href="../img/playstore.png">
+  <!-- Manifest dinámico para conservar UTM -->
+  <script>
+    (function() {
+      const currentUrl = new URL(window.location.href);
+      const params = currentUrl.search;
+
+      const dynamicManifest = {
+        name: "John Deere Expo",
+        short_name: "JD Expo",
+        start_url: currentUrl.pathname + (params ? params : ""),
+        display: "standalone",
+        background_color: "#ffffff",
+        theme_color: "#0a6412",
+        icons: [
+          {
+            src: "/img/playstore.png",
+            sizes: "192x192",
+            type: "image/png"
+          },
+          {
+            src: "/img/playstore.png",
+            sizes: "512x512",
+            type: "image/png"
+          }
+        ]
+      };
+
+      const blob = new Blob([JSON.stringify(dynamicManifest)], { type: "application/json" });
+      const manifestUrl = URL.createObjectURL(blob);
+
+      const link = document.createElement("link");
+      link.rel = "manifest";
+      link.href = manifestUrl;
+      document.head.appendChild(link);
+    })();
+  </script>
+
+  <meta name="theme-color" content="#0a6412">
+  <!-- Favicon para escritorio -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/john-deere-logo.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/playstore.png">
+  <!-- ✅ Fin de íconos -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-166980596-1"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-166980596-1");
+  </script>
+</head>
+
+
+  <body class="home">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Bundle con Popper (necesario para modals) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" href="#">
+          <img src="../img/john-deere-logo.svg" alt="John Deere" />
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <div
+        class="form-container-register form-container-register-variant form-container-register--5065"
+      >
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-lg-6 d-flex flex-column justify-content-between px-4 pt-0"
+            >
+              <div class="pt-4">
+                <img
+                  class="img-fluid mb-5 mb-md-0"
+                  src="../img/expoagro/expo-agro-guanajuato.png"
+                  alt="Expo Agro Guanajuato"
+                />
+              </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div
+              class="col-lg-5 form-container__fields form-container__fields--hotsale"
+            >
+              <form class="mb-5" id="registroForm">
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Nombre completo*"
+                  required
+                />
+                <br />
+                <div class="d-flex justify-content-between">
+                  <div class="form-select-type">
+                    <select
+                      id="estado"
+                      class="select-margin"
+                      name="estado"
+                      required
+                    >
+                      <option value="value1">Estado*</option>
+                      <option value="value2">Value 2</option>
+                      <option value="value3">Value 3</option>
+                    </select>
+                  </div>
+                  <div class="form-select-type">
+                    <select id="municipio" name="municipio" required>
+                      <option value="value1">Municipio*</option>
+                      <option value="value2">Value 2</option>
+                      <option value="value3">Value 3</option>
+                    </select>
+                  </div>
+                </div>
+                <input
+                  type="email"
+                  id="correo"
+                  name="correo"
+                  placeholder="E-mail*"
+                />
+                <br />
+                  <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    placeholder="Ingresar 10 dígitos"
+                    maxlength="10"
+                    pattern="[0-9]{10}"
+                    inputmode="numeric"
+                  />
+
+                <br />
+
+                <div class="d-flex legal-checkbox">
+                  <input
+                    type="checkbox"
+                    id="accept_checkbox"
+                    name="accept_checkbox"
+                    required
+                  />
+                  <label
+                    class="mb-0"
+                    for="accept_checkbox"
+                    style="font-family: 'JD Sans Pro'"
+                  >
+                    He leído el aviso legal y acepto el
+                    <span
+                      id="legal_notice_toggle_vjd"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalPrivacidad"
+                      style="cursor: pointer; text-decoration: underline"
+                    >
+                      Aviso de Privacidad y Uso de Datos
+                    </span>
+                  </label>
+                </div>
+                <br />
+                <button
+                  class="btn btn-secondary btn-text-lg mb-3"
+                  type="submit"
+                  value="REGISTRARSE"
+                >
+                  Regístrate
+                </button>
+                <div
+                  class="alert alert-success"
+                  id="registroSuccess"
+                  style="display: none"
+                >
+                  Tu registro fue realizado con éxito.
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="modalPrivacidad"
+        tabindex="-1"
+        aria-labelledby="modalPrivacidadLabel"
+        style="z-index: 2000"
+      >
+        <div class="modal-dialog modal-lg">
+          <!-- modal-lg para más espacio -->
+          <div class="modal-content">
+            <div class="modal-header d-block">
+              <!-- Título actualizado -->
+              <h5 id="modalPrivacidadLabel" class="modal-title">
+                Avíso de Privacidad y Uso de Datos
+              </h5>
+
+              <!-- Texto completo actualizado -->
+              <p>
+                Acepto recibir mensajes de texto, correos electrónicos y mensajes vía WhatsApp de la aplicación o página web, así como de campañas y promociones.
+              </p>
+              <p>
+                Al aceptar el presente aviso usted otorga su consentimiento para que John Deere, cualquiera de sus subsidiarias o filiales, así como su red de Distribuidores Autorizados tengan acceso al tratamiento de sus datos personales que ingrese en esta aplicación con la finalidad de crear una mejor experiencia de servicio al cliente, así como, para contactarlo para ofrecerle productos y/o servicios que sean de su interés. Sus datos se compartirán con la red de Distribuidores Autorizados y se almacenarán durante el período necesario para el cumplimiento del propósito aquí establecido, así como con cualquier legislación aplicable. Para más información sobre nuestra Política de Privacidad por favor visite: 
+                <a
+                  href="https://www.deere.com.mx/es/privacidad-y-protección-de-datos/"
+                  target="_blank"
+                  style="color: lightblue; font-size: 14px"
+                >
+                  https://www.deere.com.mx/es/privacidad-y-protección-de-datos/
+                </a>
+              </p>
+              <p>
+                Si tiene alguna pregunta o comentario sobre las prácticas de privacidad o el presente aviso, puede enviar un correo electrónico a:
+                <a
+                  href="mailto:PrivacyManager@JohnDeere.com"
+                  style="color: lightblue"
+                >
+              
+                  PrivacyManager@JohnDeere.com
+                </a>.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                id="btnAceptarModal"
+                type="button"
+                data-bs-dismiss="modal"
+                class="btn btn-primary"
+                style="background-color: #ffde00; color: #171717"
+              >
+                Aceptar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const btnAceptarModal = document.getElementById("btnAceptarModal");
+          const acceptCheckbox = document.getElementById("accept_checkbox");
+
+          btnAceptarModal.addEventListener("click", function () {
+            acceptCheckbox.checked = true;
+          });
+        });
+      </script>
+    </main>
+    <footer>
+      <div class="container text-center py-3">
+        <div class="footer-toggle">
+          <!-- Botón que abre el modal -->
+          <button
+            id="toggleAdvice"
+            class="toggleadvice-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#modalFooterAdvice"
+          >
+            <p>Aviso Legal</p>
+            <i class="icon-arrow-drop-down-svgrepo-com toggle-icon"></i>
+          </button>
+        </div>
+
+        <p>
+          <a href="https://www.deere.com.mx" target="_blank" class="footer-link"
+            ><b>www.JohnDeere.com.mx</b></a
+          >
+        </p>
+        <ul class="footer-nav">
+          <li>
+            <a
+              href="https://www.deere.com.mx/es/privacidad-y-protección-de-datos/"
+              target="_blank"
+              >Privacidad y datos</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.deere.com.mx/es/privacidad-y-protección-de-datos/pol%C3%ADtica-de-cookies/"
+              target="_blank"
+              >Política de cookies</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.deere.com.mx/es/privacidad-y-protección-de-datos/aviso-legal/"
+              target="_blank"
+              >Aviso legal</a
+            >
+          </li>
+        </ul>
+        <p>Copyright © 2019 Deere & Company. Todos los derechos reservados.</p>
+        <nav class="social">
+          <a href="https://www.facebook.com/JohnDeereMexico" target="_blank">
+            <svg class="icon">
+              <use xlink:href="img/symbol-defs.svg#icon-facebook"></use>
+            </svg>
+          </a>
+          <a href="https://twitter.com/johndeeremexico" target="_blank">
+            <svg class="icon">
+              <use xlink:href="img/symbol-defs.svg#icon-twitter"></use>
+            </svg>
+          </a>
+          <a
+            href="https://www.youtube.com/user/JohnDeereMexico"
+            target="_blank"
+          >
+            <svg class="icon">
+              <use xlink:href="img/symbol-defs.svg#icon-youtube"></use>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/JohnDeereMexico/" target="_blank">
+            <svg class="icon">
+              <use xlink:href="img/symbol-defs.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </footer>
+
+<!-- Modal Footer Aviso -->
+<div
+  class="modal fade"
+  id="modalFooterAdvice"
+  tabindex="-1"
+  aria-labelledby="modalFooterAdviceLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header d-block">
+              <!-- Título actualizado -->
+              <h5 id="modalPrivacidadLabel" class="modal-title">
+                Avíso de Privacidad y Uso de Datos
+              </h5>
+
+              <!-- Texto completo actualizado -->
+              <p>
+                Acepto recibir mensajes de texto, correos electrónicos y mensajes vía WhatsApp de la aplicación o página web, así como de campañas y promociones.
+              </p>
+              <p>
+                Al aceptar el presente aviso usted otorga su consentimiento para que John Deere, cualquiera de sus subsidiarias o filiales, así como su red de Distribuidores Autorizados tengan acceso al tratamiento de sus datos personales que ingrese en esta aplicación con la finalidad de crear una mejor experiencia de servicio al cliente, así como, para contactarlo para ofrecerle productos y/o servicios que sean de su interés. Sus datos se compartirán con la red de Distribuidores Autorizados y se almacenarán durante el período necesario para el cumplimiento del propósito aquí establecido, así como con cualquier legislación aplicable. Para más información sobre nuestra Política de Privacidad por favor visite: 
+                <a
+                  href="https://www.deere.com.mx/es/privacidad-y-protección-de-datos/"
+                  target="_blank"
+                  style="color: lightblue; font-size: 14px"
+                >
+                  https://www.deere.com.mx/es/privacidad-y-protección-de-datos/
+                </a>
+              </p>
+              <p>
+                Si tiene alguna pregunta o comentario sobre las prácticas de privacidad o el presente aviso, puede enviar un correo electrónico a:
+                <a
+                  href="mailto:PrivacyManager@JohnDeere.com"
+                  style="color: lightblue"
+                >
+              
+                  PrivacyManager@JohnDeere.com
+                </a>.
+              </p>
+
+        <!-- Aquí se podrían seguir agregando los puntos 2, 3, 4, 5, 6 con la misma estructura -->
+        <!-- Recomiendo mantener cada sección como <p> o <h6>/<strong> para títulos y <p> para contenido -->
+
+      </div>
+
+      <div class="modal-footer">
+        <button
+          type="button"
+          data-bs-dismiss="modal"
+          class="btn btn-primary"
+          style="background-color: #ffde00; color: #171717"
+        >
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/random-string.js"></script>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
