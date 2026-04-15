@@ -149,3 +149,12 @@ Futuras mejoras del sistema:
 - Generación de reportes avanzados  
 - Integración con sistemas externos (CRM)  
 - Optimización del proceso de sincronización  
+
+
+## Acceso al producto
+
+El sistema puede ejecutarse de manera local abriendo el archivo `index.html` en un navegador moderno.
+
+No requiere instalación de servidores adicionales, ya que funciona bajo un enfoque offline-first utilizando tecnologías del lado del cliente.
+
+Para pruebas completas, se recomienda utilizar un servidor local.
