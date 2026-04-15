@@ -17,3 +17,12 @@ El sistema está compuesto por:
 - Módulo de sincronización
 - API REST
 - Base de datos central
+
+## Tabla de Contenidos
+
+- [Requerimientos](#requerimientos)
+- [Instalación](#instalación)
+- [Configuración](#configuración)
+- [Uso](#uso)
+- [Contribución](#contribución)
+- [Roadmap](#roadmap)
