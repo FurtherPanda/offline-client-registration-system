@@ -160,3 +160,18 @@ El sistema puede ejecutarse de manera local abriendo el archivo `index.html` en 
 No requiere instalación de servidores adicionales, ya que funciona bajo un enfoque offline-first utilizando tecnologías del lado del cliente.
 
 Para pruebas completas, se recomienda utilizar un servidor local.
+
+### Ejecutar en entorno local
+
+Se puede ejecutar utilizando un servidor local con Python:
+
+```bash
+python3 -m http.server 8080
+```
+
+o con Node.js/Next.Js
+
+```bash
+npx http-server -p 8080
+npm run dev
+```
