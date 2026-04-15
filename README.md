@@ -175,3 +175,6 @@ o con Node.js/Next.Js
 npx http-server -p 8080
 npm run dev
 ```
+## Video de demostración
+
+[https://youtu.be/_QHvvAq0Dhs](https://youtu.be/_QHvvAq0Dhs)
